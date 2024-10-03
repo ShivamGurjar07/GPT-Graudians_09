@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion with Code Example</title>
+    <link rel="stylesheet" href="accordian_component.css">
+</head>
+<body>
+
+    <div class="accordion-container">
+        <a href="home.html">
+            <button class="back-btn">← Go Back</button>
+        </a>
+        <a href="#">
+            <button class="doc-btn"> Browse Accordion Doc</button>
+        </a>
+        
+        <h2 class="accordion_h2">Accordion with Code Examples</h2>
+
+        <!-- Basic Accordion -->
+        <div class="accordion">
+            <h3 class="accordion_h3">Basic</h3>
+            
+            <!-- Basic Accordion 1 -->
+            <div class="accordion-item">
+                <input type="checkbox" id="basic-1" class="accordion-toggle">
+                <label for="basic-1" class="accordion-header">What admin theme does?</label>
+                <div class="accordion-content">
+                    <p>Answer for basic question 1 goes here.</p>
+                </div>
+            </div>
+
+            <!-- Basic Accordion 2 -->
+            <div class="accordion-item">
+                <input type="checkbox" id="basic-2" class="accordion-toggle">
+                <label for="basic-2" class="accordion-header">How do I customize the theme?</label>
+                <div class="accordion-content">
+                    <p>Answer for basic question 2 goes here.</p>
+                </div>
+            </div>
+
+            <!-- Combined code for both Basic Accordions -->
+            <button class="show-code-btn" onclick="toggleCode('basic-code')">Show Code</button>
+            <pre id="basic-code" class="code-block">
+&lt;!-- Basic Accordion 1 --&gt;
+&lt;div class="accordion-item"&gt;
+    &lt;input type="checkbox" id="basic-1" class="accordion-toggle"&gt;
+    &lt;label for="basic-1" class="accordion-header"&gt;What admin theme does?&lt;/label&gt;
+    &lt;div class="accordion-content"&gt;
+        &lt;p&gt;Answer for basic question 1 goes here.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Basic Accordion 2 --&gt;
+&lt;div class="accordion-item"&gt;
+    &lt;input type="checkbox" id="basic-2" class="accordion-toggle"&gt;
+    &lt;label for="basic-2" class="accordion-header"&gt;How do I customize the theme?&lt;/label&gt;
+    &lt;div class="accordion-content"&gt;
+        &lt;p&gt;Answer for basic question 2 goes here.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+        </div>
+
+        <!-- Controlled Accordion -->
+        <div class="accordion">
+            <h3 class="accordion_h3">Controlled</h3>
+            
+            <!-- Controlled Accordion 1 -->
+            <div class="accordion-item">
+                <input type="checkbox" id="controlled-1" class="accordion-toggle">
+                <label for="controlled-1" class="accordion-header">What admin theme does?</label>
+                <div class="accordion-content">
+                    <p>Answer for controlled question 1 goes here.</p>
+                </div>
+            </div>
+
+            <!-- Controlled Accordion 2 -->
+            <div class="accordion-item">
+                <input type="checkbox" id="controlled-2" class="accordion-toggle">
+                <label for="controlled-2" class="accordion-header">How do I control it?</label>
+                <div class="accordion-content">
+                    <p>Answer for controlled question 2 goes here.</p>
+                </div>
+            </div>
+
+            <!-- Combined code for both Controlled Accordions -->
+            <button class="show-code-btn" onclick="toggleCode('controlled-code')">Show Code</button>
+            <pre id="controlled-code" class="code-block">
+&lt;!-- Controlled Accordion 1 --&gt;
+&lt;div class="accordion-item"&gt;
+    &lt;input type="checkbox" id="controlled-1" class="accordion-toggle"&gt;
+    &lt;label for="controlled-1" class="accordion-header"&gt;What admin theme does?&lt;/label&gt;
+    &lt;div class="accordion-content"&gt;
+        &lt;p&gt;Answer for controlled question 1 goes here.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Controlled Accordion 2 --&gt;
+&lt;div class="accordion-item"&gt;
+    &lt;input type="checkbox" id="controlled-2" class="accordion-toggle"&gt;
+    &lt;label for="controlled-2" class="accordion-header"&gt;How do I control it?&lt;/label&gt;
+    &lt;div class="accordion-content"&gt;
+        &lt;p&gt;Answer for controlled question 2 goes here.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+        </div>
+
+        <!-- Outlined Accordion -->
+        <div class="accordion outlined">
+            <h3 class="accordion_h3">Outlined Variant</h3>
+            
+            <!-- Outlined Accordion 1 -->
+            <div class="accordion-item">
+                <input type="checkbox" id="outlined-1" class="accordion-toggle">
+                <label for="outlined-1" class="accordion-header">What admin theme does?</label>
+                <div class="accordion-content">
+                    <p>Answer for outlined question 1 goes here.</p>
+                </div>
+            </div>
+
+            <!-- Outlined Accordion 2 -->
+            <div class="accordion-item">
+                <input type="checkbox" id="outlined-2" class="accordion-toggle">
+                <label for="outlined-2" class="accordion-header">How do I outline it?</label>
+                <div class="accordion-content">
+                    <p>Answer for outlined question 2 goes here.</p>
+                </div>
+            </div>
+
+            <!-- Combined code for both Outlined Accordions -->
+            <button class="show-code-btn" onclick="toggleCode('outlined-code')">Show Code</button>
+            <pre id="outlined-code" class="code-block">
+&lt;!-- Outlined Accordion 1 --&gt;
+&lt;div class="accordion-item outlined"&gt;
+    &lt;input type="checkbox" id="outlined-1" class="accordion-toggle"&gt;
+    &lt;label for="outlined-1" class="accordion-header"&gt;What admin theme does?&lt;/label&gt;
+    &lt;div class="accordion-content"&gt;
+        &lt;p&gt;Answer for outlined question 1 goes here.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Outlined Accordion 2 --&gt;
+&lt;div class="accordion-item outlined"&gt;
+    &lt;input type="checkbox" id="outlined-2" class="accordion-toggle"&gt;
+    &lt;label for="outlined-2" class="accordion-header"&gt;How do I outline it?&lt;/label&gt;
+    &lt;div class="accordion-content"&gt;
+        &lt;p&gt;Answer for outlined question 2 goes here.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle showing the code block
+        function toggleCode(id) {
+            const codeBlock = document.getElementById(id);
+            if (codeBlock.style.display === 'block') {
+                codeBlock.style.display = 'none';
+            } else {
+                codeBlock.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
