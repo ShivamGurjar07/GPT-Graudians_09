@@ -1,15 +1,22 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #0A001F;
+    color: white;
 }
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
+    background-color: #0A001F;
 }
-.back-button {
+
+.button-group {
+    display: flex;
     margin-bottom: 20px;
 }
+
 button {
     padding: 10px 15px;
     background-color: #007bff;
@@ -17,32 +24,59 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-right: 10px; 
 }
+
 button:hover {
     background-color: #0056b3;
 }
+
 .list-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     width: 100%;
 }
+
 .list-box {
     border: 1px solid #ddd;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 15px; 
+    background-color: #1c1031; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
+
+.list-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 .list-box h3 {
     margin-bottom: 10px;
+    background: linear-gradient(90deg, #ff66cc, #9966ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
+
 .list-box ul {
     list-style-type: none;
     padding-left: 0;
 }
+
 .list-box ul li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
+
 .list-box ul li:hover {
     text-decoration: underline;
+}
+
+.list-box ul li i {
+    margin-right: 10px;
 }
