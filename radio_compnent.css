@@ -15,11 +15,15 @@ body {
 
 .radio_container {
     width: 80%;
+    height: 100%;
     margin: auto;
     padding: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .radio_h1{
+    margin-top: 20px;
     margin-bottom: 100px;
     text-align: center;
     color: white;
@@ -27,7 +31,8 @@ body {
 }
 
 .radio_but {
-    padding: 15px 25px;
+  
+    padding: 5px 10px;
     margin: 10px;
     border: none;
     border-radius: 10px;
@@ -48,23 +53,25 @@ body {
 }
 
 .radio-sections {
-    height: 180px;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-between;
     margin-bottom: 30px;
     padding: 10px;
-    flex-wrap: wrap;
 }
 
 .radio-section {
-    height: 180px;
+    width: 45%;
+    /* height: 180px; */
     background-color: rgb(247, 243, 243);
-    /* background-color: white; */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0.3, 0.6, 0, 0.1);
-    width: 45%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+    flex: 1 1 45%;
 }
 
 .radio_h3 {
@@ -81,6 +88,33 @@ body {
 input[type="radio"] {
     display: none;
 }
+
+
+.show-code-button {
+    background-color: #1C113D;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.code-section {
+    display: none;
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+    max-height: 200px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+pre {
+    margin: 0;
+}
+
 
 input[type="radio"] + label {
     width: 20px;
@@ -206,6 +240,7 @@ input[type="radio"]:checked + label[data-size="small"] {
     margin-right: 30px;
 }
 
+
 /* For mobile devices */
 @media only screen and (max-width: 600px) {
     .radio_h1 {
@@ -219,7 +254,7 @@ input[type="radio"]:checked + label[data-size="small"] {
     }
 
     .radio-sections {
-        height: 360px;
+        height: 100%;
         display: block;
         margin-bottom: 20px;
     }
@@ -227,7 +262,7 @@ input[type="radio"]:checked + label[data-size="small"] {
 
     .radio-section {
         width: 100%;
-        height: 250px;
+        height: 100%;
         padding: 20px;
     }
 
@@ -256,6 +291,10 @@ input[type="radio"]:checked + label[data-size="small"] {
 
     .size-texts {
         gap: 20px;
+    }
+    .radio-section {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
 
