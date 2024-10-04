@@ -60,13 +60,11 @@ body {
     justify-content: space-between;
     margin-bottom: 30px;
     padding: 10px;
-    flex-wrap: wrap;
 }
 
 .radio-section {
     width: 45%;
     /* height: 180px; */
-    height: 180px;
     background-color: rgb(247, 243, 243);
     padding: 30px;
     border-radius: 10px;
