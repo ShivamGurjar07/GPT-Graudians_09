@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion-container {
+    background-color: rgba(110, 110, 119, 0.8); /* Semi-transparent background */
+    padding: 30px;
+    animation: fadeIn 1s ease-in-out;
+    margin-top:200px;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.accordion-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+    background-color: rgba(110, 110, 119, 0.9);
+}
+
+.accordion_h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 40px;
+    animation: slideIn 1s ease forwards;
+}
+
+.back-btn, .doc-btn {
+    padding: 15px 25px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1em;
+    color: white;
+    background-image: linear-gradient(to right, #ff6a00, #ee0979);
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.back-btn:hover, .doc-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.accordion_h3 {
+    color: white;
+    margin: 15px 0;
+    font-size: 1.5em;
+}
+
+.accordion-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
+}
+
+.accordion-item:hover {
+    transform: scale(1.02); /* Slightly scale on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+}
+
+.accordion-header {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent */
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    color: #fff; /* Updated text color */
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #666;
+    border-radius: 0 0 12px 12px;
+}
+
+.accordion-header::after {
+    content: '▼';
+    font-size: 12px;
+    color: #888;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.accordion-toggle:checked + .accordion-header::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.accordion-toggle:checked + .accordion-header + .accordion-content {
+    display: block;
+}
+
+.code-block {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    padding: 15px;
+    border-radius: 5px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    display: none;
+}
+
+.show-code-btn {
+    background-image: linear-gradient(to right, #ff6a00, #ee0979);
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.show-code-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .accordion-container {
+        padding: 10px;
+    }
+
+    .back-btn, .doc-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .accordion-item {
+        margin-bottom: 10px;
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+body{
+    background-color: rgba(110, 110, 119, 0.9);
+}

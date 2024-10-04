@@ -1,114 +1,225 @@
-.c1ontainer{
-    background-color: rgb(28,17,61);
-    border: 2px solid red;
-    padding:30px 0px;
+body {
+    background-image: url("https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg");
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the background image */
+    margin: 0; /* Remove default margin */
 }
-*{
+
+.c1ontainer {
+    background-color: rgb(110, 110, 119);
+    padding: 30px 0px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.p1ower{
-    
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.p1ower {
     color: white;
-    
     text-align: center;
     font-size: 2.625rem;
     font-weight: 700;
     margin-bottom: 2.5rem;
-
-
+    animation: slideIn 5s ease forwards;
 }
-.q1uick{
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-480px);
+        opacity: 0;
+    }
     
+    to {
+        transform: translateY(20px);
+    }
+}
+
+.q1uick {
     text-align: center;
-    background: linear-gradient(300deg, rgb(105, 80, 232) 0%, rgb(251, 97, 134) 25%, rgb(105, 80, 232) 50%, rgb(251, 97, 134) 75%, rgb(105, 80, 232) 100%) 0% 0% / 150% text;
+    background: linear-gradient(to right, #ff6a00, #ee0979);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    font-size: 15.75rem;
+    font-weight: bold;
+    font-size: 3.75rem;
     font-weight: 900;
-    margin-bottom: 2.1rem;
-}
-.c1hoose{
-    color: white;
+    padding-bottom: 1.1rem;
+    transition: transform 0.3s ease;
     
+    margin: auto;
+    width: 50%;
+}
+
+.q1uick:hover {
+    transform: scale(1.1);
+}
+
+.c1hoose, .c2hoose {
+    color: white;
     font-size: 1.2rem;
     font-weight: 600;
     text-align: center;
-   
 }
-.c2hoose{
-    color: white;
-    
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-align: center;
+
+.c2hoose {
     margin-top: 0.313rem;
     margin-bottom: 2.5rem;
-   
 }
-.bv{
-    /* border: 1px solid red; */
+
+.bv {
     display: flex;
     justify-content: center;
     gap: 1.063rem;
     align-items: center;
-
+    margin-bottom: 5rem;
 }
-.browse{
+
+.browse1 > button {
+    animation: buttonleft 4s ease-in;
+}
+
+@keyframes buttonleft {
+    from {
+        transform: translateY(-800px);
+        opacity: 0;
+    }
     
+    to {
+        transform: translateY(0px);
+    }
 }
-.browse>button{
-    border: 1px solid green;
-    padding:0.625rem 1.5rem;
-    background-color: rgb(105, 80, 232);
-    font-weight: 700;
-    color:white;
-    border:none;
-    border-radius: 0.5rem;
-    font-size:1rem ;
 
+.view > button {
+    animation: buttonright 4s ease-in;
 }
-.view>button{
-    border: 1px solid white;
-    padding:0.625rem 1.5rem;
-    border-radius: 0.5rem;
-    font-size:1rem ;
-    font-weight: 700;
-    /* color:rgb(28,27,188); */
-    background:none;
+
+@keyframes buttonright {
+    from {
+        transform: translateY(-800px);
+        opacity: 0;
+    }
     
-   
+    to {
+        transform: translateY(0px);
+    }
 }
-.browse>button,.view>button{
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-image: linear-gradient(to right, #ff6a00, #ee0979);
 
-
-
-
-
-
- /* Gradient colors */
-  }
-  
-  .browse>button:hover,.view>button:hover {
-    transform: translateY(-4px); /* Lift the button slightly to enhance the 3D feel */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-  }
-  .browse>button,.view>button {
+.browse1 > button, .view > button {
     padding: 12px 24px;
     font-size: 18px;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    /* Gradient colors */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
+    background-image: linear-gradient(to right, #ff6a00, #ee0979);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative; /* For pseudo-elements */
+    overflow: hidden; /* Prevent overflow of pseudo-elements */
+}
+
+.browse1 > button:hover, .view > button:hover {
+    transform: translateY(-4px); /* Move button up on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.browse1 > button:before, .view > button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2); /* White overlay */
+    transform: scale(0); /* Start with scale 0 */
+    transition: transform 0.3s ease; /* Transition for scaling */
+}
+
+.browse1 > button:hover:before, .view > button:hover:before {
+    transform: scale(1); /* Scale to full size on hover */
+    cursor: pointer;
+}
+
+.container1, .container2, .container3 {
+    height: 54.5rem; /* Keep the size consistent */
+    width: 86%;
+    margin: auto;
+    padding: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: transform 0.3s ease;
+    border: px solid transparent;
+    border-image: url('https://th.bing.com/th/id/R.ccfa9ddc26490623ae5a560f2478721f?rik=5LVJUIUlfTmf5w&riu=http%3a%2f%2fwallpapercave.com%2fwp%2f4lImLyA.jpg&ehk=2AQZ2jVoiesMErnFGBSxD2RbgdF%2fXjSF88oMXVEHU8o%3d&risl=&pid=ImgRaw&r=0') 20 round;
+}
+
+.container1 {
+    
+}
+
+.container1:hover, .container2:hover, .container3:hover {
+    transform: scale(1.02);
+}
+
+.piccontainer {
+    border: 5px solid;
+    height: 98%;
+    border-image: linear-gradient(to right, #ff6a00, #ee0979) 1;
+    border-radius: 30px;
+    animation: borderColorChange 1s infinite;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.piccontainer:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.piccontainer > img {
+    height: 100%;
+    width: 100%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.piccontainer > img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@keyframes borderColorChange {
+    0% {
+        border-image: linear-gradient(to right, #ff6a00, #ee0979) 1;
+    }
+    50% {
+        border-image: linear-gradient(to right, #00c6ff, #0072ff) 1;
+    }
+    100% {
+        border-image: linear-gradient(to right, #ff6a00, #ee0979) 1;
+    }
+}
+
+.ram {
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.piccontainer {
+    border: 5px solid transparent;
+    border-image: url('https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1rCJyA.img?w=768&h=432&m=6&x=150&y=118&s=116&d=116') 30 stretch;
+}
+
