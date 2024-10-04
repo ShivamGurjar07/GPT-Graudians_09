@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button Layout</title>
+    <link rel="stylesheet" href="radio_compnent.css">
+</head>
+<body>
+
+    <!-- main -->
+    <div class="radio_container">
+        <a href="component.index">
+            <button class="radio_but back-button">← Go Back</button>
+        </a>
+        <a href="#">
+            <button class="radio_but doc-button">Browse Radio Button Doc</button>
+        </a>   
+     
+        <h1 class="radio_h1">Radio Button With Code Example</h1>
+        
+        <div class="radio-sections">
+
+            <!-- Colors Section -->
+            <div class="radio-section" id="color-section">
+                <h3 class="radio_h3">Colors</h3>
+                <div class="radio-group">
+                    <input type="radio" id="color1" name="color" checked>
+                    <label for="color1" data-color="blue"></label>Blue
+                    <input type="radio" id="color2" name="color">
+                    <label for="color2" data-color="pink"></label>Pink
+                    <input type="radio" id="color3" name="color">
+                    <label for="color3" data-color="green"></label>Green
+                    <input type="radio" id="color4" name="color">
+                    <label for="color4" data-color="yellow"></label>Yellow
+                    <input type="radio" id="color5" name="color">
+                    <label for="color5" data-color="red"></label>Red
+                </div>
+                <button class="show-code-button" onclick="toggleCode('color-code')">Show Code</button>
+                <div class="code-section" id="color-code">
+<pre><code>
+&lt;div class="radio-group"&gt;
+    &lt;input type="radio" id="color1" name="color" checked&gt;
+    &lt;label for="color1" data-color="blue"&gt;&lt;/label&gt;Blue
+    &lt;input type="radio" id="color2" name="color"&gt;
+    &lt;label for="color2" data-color="pink"&gt;&lt;/label&gt;Pink
+    &lt;input type="radio" id="color3" name="color"&gt;
+    &lt;label for="color3" data-color="green"&gt;&lt;/label&gt;Green
+    &lt;input type="radio" id="color4" name="color"&gt;
+    &lt;label for="color4" data-color="yellow"&gt;&lt;/label&gt;Yellow
+    &lt;input type="radio" id="color5" name="color"&gt;
+    &lt;label for="color5" data-color="red"&gt;&lt;/label&gt;Red
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Sizes Section -->
+            <div class="radio-section" id="size-section">
+                <h3 class="radio_h3">Sizes</h3>
+                <div class="radio-group">
+                    <input type="radio" id="size1" name="size">
+                    <label for="size1" data-size="large"></label>
+                    <input type="radio" id="size2" name="size" checked>
+                    <label for="size2" data-size="medium"></label>
+                    <input type="radio" id="size3" name="size">
+                    <label for="size3" data-size="small"></label>
+                </div>
+                <button class="show-code-button" onclick="toggleCode('size-code')">Show Code</button>
+                <div class="code-section" id="size-code">
+<pre><code>
+&lt;div class="radio-group"&gt;
+    &lt;input type="radio" id="size1" name="size"&gt;
+    &lt;label for="size1" data-size="large"&gt;&lt;/label&gt;
+    &lt;input type="radio" id="size2" name="size" checked&gt;
+    &lt;label for="size2" data-size="medium"&gt;&lt;/label&gt;
+    &lt;input type="radio" id="size3" name="size"&gt;
+    &lt;label for="size3" data-size="small"&gt;&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Label Section -->
+            <div class="radio-section" id="label-section">
+                <h3 class="radio_h3">Label</h3>
+                <div class="radio-group">
+                    <input type="radio" id="female" name="gender">
+                    <label for="female"></label>Female
+                    <input type="radio" id="male" name="gender">
+                    <label for="male"></label>Male
+                    <input type="radio" id="other" name="gender" checked>
+                    <label for="other"></label>Other
+                </div>
+                <button class="show-code-button" onclick="toggleCode('label-code')">Show Code</button>
+                <div class="code-section" id="label-code">
+<pre><code>
+&lt;div class="radio-group"&gt;
+    &lt;input type="radio" id="female" name="gender"&gt;
+    &lt;label for="female"&gt;&lt;/label&gt;Female
+    &lt;input type="radio" id="male" name="gender"&gt;
+    &lt;label for="male"&gt;&lt;/label&gt;Male
+    &lt;input type="radio" id="other" name="gender" checked&gt;
+    &lt;label for="other"&gt;&lt;/label&gt;Other
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Label Placement Section -->
+            <div class="radio-section" id="placement-section">
+                <h3 class="radio_h3">Label placement</h3>
+                <div class="radio-group">
+                    <input type="radio" id="top" name="placement">
+                    <label for="top"></label>Top
+                    <input type="radio" id="start" name="placement">
+                    <label for="start"></label>Start
+                    <input type="radio" id="end" name="placement" checked>
+                    <label for="end"></label>End
+                    <input type="radio" id="bottom" name="placement">
+                    <label for="bottom"></label>Bottom
+                </div>
+                <button class="show-code-button" onclick="toggleCode('placement-code')">Show Code</button>
+                <div class="code-section" id="placement-code">
+<pre><code>
+&lt;div class="radio-group"&gt;
+    &lt;input type="radio" id="top" name="placement"&gt;
+    &lt;label for="top"&gt;&lt;/label&gt;Top
+    &lt;input type="radio" id="start" name="placement"&gt;
+    &lt;label for="start"&gt;&lt;/label&gt;Start
+    &lt;input type="radio" id="end" name="placement" checked&gt;
+    &lt;label for="end"&gt;&lt;/label&gt;End
+    &lt;input type="radio" id="bottom" name="placement"&gt;
+    &lt;label for="bottom"&gt;&lt;/label&gt;Bottom
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript to toggle code sections -->
+    <script>
+        function toggleCode(id) {
+            const codeSection = document.getElementById(id);
+            if (codeSection.style.display === "block") {
+                codeSection.style.display = "none";
+            } else {
+                codeSection.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
