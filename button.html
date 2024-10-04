@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        #buttonpage{
+            width: 80%;
+            margin: auto;
+            font-family: sans-serif;
+        }
+        .code-container {
+            position: relative;
+            width: 100%;
+            margin: 20px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow: auto;
+            font-family: 'Courier New', monospace;
+        }
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .copy-button:hover {
+            background-color: #45a049;
+        }
+        .codeexample{
+            border: 1px solid rgb(158, 158, 158);
+            margin-bottom: -21px;
+            border-radius: 10px 10px 0px 0px;
+            width: 100%;
+            overflow: none;
+        }
+        .codeexamplemainbox{
+            display: flex;
+            margin: auto;
+            justify-content: space-evenly;
+            text-align: center;
+            align-items: center;
+            padding: 18px;
+            width: 40%;
+
+        }
+        .codeexamplemainbox>p{
+            margin: 5px;
+        }
+        .buttonpagebutton1{
+            background-color: #1565c0;
+            padding: 10px 30px;
+            margin-top: 10px;
+            color:  #ffff;
+            font-weight: bold;
+            border-radius: 7px;
+        }
+        .buttonpagebutton2{
+            color: #1565c0;
+            border: 1px solid #1565c0;
+            padding: 10px 30px;
+            margin-top: 10px;
+            border-radius: 7px;
+        }
+        .buttonpagebutton2:hover{
+            background-color: #1565c03d;
+        }
+        #listbutton{
+            line-height: 1.6;
+        }
+        .textbutton1,.textbutton3{
+            color: #1565c0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .textbutton1:hover,.textbutton3:hover{
+            background-color: rgba(142, 221, 231, 0.185);
+        }
+        .textbutton2{
+            color: rgba(128, 128, 128, 0.445);
+        }
+        .containedbutton1{
+            background-color: #99999950;
+            padding: 10px 30px;
+            margin-top: 10px;
+            color:  #979797c9;
+            font-weight: bold;
+            border-radius: 7px;
+        }
+        .outlinedbutton1{
+            background-color: #ffff;
+            padding: 10px 30px;
+            margin-top: 10px;
+            color:  #9999999d;
+            font-weight: bold;
+            border-radius: 7px;
+            border:1px solid #9999999d;
+        }
+        .colorbutton{
+            
+            padding: 10px 30px;
+            margin-top: 10px;
+            color:  #9c27b0;
+            font-weight: bold;
+            border-radius: 7px;
+        }
+        .colorbutton:hover{
+            background-color: #dbdbdb;
+        }
+        .colorbutton1{
+            background-color: #1b5e1fb2;
+            padding: 10px 30px;
+            margin-top: 10px;
+            color:  #ffff;
+            font-weight: bold;
+            border-radius: 7px;
+        }
+        .colorbutton1:hover{
+            background-color: #1b5e20;
+        }
+        .colorbutton2{
+            background-color: #ffff;
+            padding: 10px 30px;
+            margin-top: 10px;
+            color:  red;
+            font-weight: bold;
+            border-radius: 7px;
+            border:1px solid red;
+        }
+        .colorbutton2:hover{
+            background-color: rgba(255, 0, 0, 0.219);
+        }
+        .css-abey57{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div id="buttonpage">
+        <div>
+            <h1>Button</h1>
+            <p>Buttons allow users to take actions, and make choices, with a single tap.</p>
+            <div>
+                <p>Buttons communicate actions that users can take. They are typically placed throughout your UI, in places like:</p>
+                <ul id="listbutton">
+                    <li>Modal windows</li>
+                    <li>Forms</li>
+                    <li>Cards</li>
+                    <li>Toolbars</li>
+                </ul>
+            </div>
+            <div>
+                <h2 style="margin-top: 55px;">Basic button</h2>
+                <p>The Button comes with three variants: text (default), contained, and outlined.</p>
+                <div class="codeexample">
+                    <div class="codeexamplemainbox">
+                        <p style="color: #1976d2;">TEXT</p>
+                        <p class="buttonpagebutton1">CONTAINED</p>
+                        <p class="buttonpagebutton2">OUTLINED</p>
+                    </div>
+                </div>
+                <div class="code-container">
+                    <button class="copy-button" onclick="copyCode('codeBlock1', this)">Copy</button>
+                    <pre id="codeBlock1">
+&lt;Button variant="text"&gt;Text&lt;/Button&gt;
+&lt;Button variant="contained"&gt;Contained&lt;/Button&gt;
+&lt;Button variant="outlined"&gt;Outlined&lt;/Button&gt;
+                    </pre>
+                </div>
+            </div>
+            <div>
+                <h2 style="margin-top: 55px;">Text button</h2>
+                <p>Text buttons are typically used for less-pronounced actions, including those located: in dialogs, in cards. In cards, text buttons help maintain an emphasis on card content.</p>
+                <div class="codeexample">
+                    <div class="codeexamplemainbox">
+                        <p class="textbutton1">PRIMARY</p>
+                        <p class="textbutton2">DISABLED</p>
+                        <p class="textbutton3">LINK</p>
+                    </div>
+                </div>
+                <div class="code-container">
+                    <button class="copy-button" onclick="copyCode('codeBlock2', this)">Copy</button>
+                    <pre id="codeBlock2">
+&lt;Button&gt;Primary&lt;/Button&gt;
+&lt;Button disabled&gt;Disabled&lt;/Button&gt;
+&lt;Button href=&quot;#text-buttons&quot;&gt;Link&lt;/Button&gt;
+                    </pre>
+                </div>
+            </div>
+            <div>
+                <h2 style="margin-top: 55px;">Contained button</h2>
+                <p>Contained buttons are high-emphasis, distinguished by their use of elevation and fill. They contain actions that are primary to your app.</p>
+                <div class="codeexample">
+                    <div class="codeexamplemainbox">
+                        <p class="buttonpagebutton1">CONTAINED</p>
+                        <p class="containedbutton1">DISABLED</p>
+                        <p class="buttonpagebutton1">LINK</p>
+                    </div>
+                </div>
+                <div class="code-container">
+                    <button class="copy-button" onclick="copyCode('codeBlock3', this)">Copy</button>
+                    <pre id="codeBlock3">
+&lt;Button variant=&quot;contained&quot;&gt;Contained&lt;/Button&gt;
+&lt;Button variant=&quot;contained&quot; disabled&gt;
+    Disabled
+&lt;/Button&gt;
+&lt;Button variant=&quot;contained&quot; href=&quot;#contained-buttons&quot;&gt;
+    Link
+&lt;/Button&gt;
+                    </pre>
+                </div>
+            </div>
+            <div style="margin-top: 40px;">
+                <p>You can remove the elevation with the <span style="border-radius: 10px; padding: 5px;background-color: rgba(128, 128, 128, 0.13);border: 1px solid rgba(128, 128, 128, 0.384);">disableElevation</span> prop.</p>
+                <div class="codeexample">
+                    <div class="codeexamplemainbox">
+                        <p class="buttonpagebutton1">DISABLE ELEVATION</p>
+                    </div>
+                </div>
+                <div class="code-container">
+                    <button class="copy-button" onclick="copyCode('codeBlock4', this)">Copy</button>
+                    <pre id="codeBlock4">
+&lt;Button variant=&quot;contained&quot; disableElevation&gt;
+    Disable elevation
+&lt;/Button&gt;
+                    </pre>
+                </div>
+            </div>
+            <div style="margin-top: 40px;">
+                <h2>Outlined button</h2>
+                <p>Outlined buttons are medium-emphasis buttons. They contain actions that are important but aren't the primary action in an app.</p>
+                <p>Outlined buttons are also a lower emphasis alternative to contained buttons, or a higher emphasis alternative to text buttons.</p>
+                <div class="codeexample">
+                    <div class="codeexamplemainbox">
+                        <p class="buttonpagebutton2">PRIMARY</p>
+                        <p class="outlinedbutton1">DISABLED</p>
+                        <p class="buttonpagebutton2">LINK</p>
+                    </div>
+                </div>
+                <div class="code-container">
+                    <button class="copy-button" onclick="copyCode('codeBlock5', this)">Copy</button>
+                    <pre id="codeBlock5">
+&lt;Button variant=&quot;outlined&quot;&gt;Primary&lt;/Button&gt;
+&lt;Button variant=&quot;outlined&quot; disabled&gt;
+    Disabled
+&lt;/Button&gt;
+&lt;Button variant=&quot;outlined&quot; href=&quot;#outlined-buttons&quot;&gt;
+    Link
+&lt;/Button&gt;
+                        
+                    </pre>
+                </div>
+            </div>
+            <div style="margin-top: 40px;">
+                <h1>Handling clicks</h1>
+                <p>All components accept an <span style="border-radius: 10px; padding: 5px;background-color: rgba(128, 128, 128, 0.13);border: 1px solid rgba(128, 128, 128, 0.384);">onClick</span> handler that is applied to the root DOM element.</p>
+                
+                <div class="code-container">
+                    <button class="copy-button" onclick="copyCode('codeBlock6', this)">Copy</button>
+                    <pre id="codeBlock6">
+&lt;Button
+onClick={() =&gt; {
+    alert('clicked');
+}}
+&gt;
+Click me
+&lt;/Button&gt;
+                    </pre>
+                </div>
+                <p>Note that the documentation <span style="color: #1565c0;font-weight: 600;"><u>avoids</u></span> mentioning native props (there are a lot) in the API section of the components.</p>
+            </div>
+            <div style="margin-top: 60px;">
+                <h1>Color</h1>
+                <div class="codeexample">
+                    <div class="codeexamplemainbox">
+                        <p class="colorbutton">SECONDARY</p>
+                        <p class="colorbutton1">SUCCESS</p>
+                        <p class="colorbutton2">ERROR</p>
+                    </div>
+                </div>
+                <div class="code-container">
+                    <button class="copy-button" onclick="copyCode('codeBlock7', this)">Copy</button>
+                    <pre id="codeBlock7">
+&lt;Button color=&quot;secondary&quot;&gt;Secondary&lt;/Button&gt;
+&lt;Button variant=&quot;contained&quot; color=&quot;success&quot;&gt;
+    Success
+&lt;/Button&gt;
+&lt;Button variant=&quot;outlined&quot; color=&quot;error&quot;&gt;
+    Error
+&lt;/Button&gt;
+                    </pre>
+                </div>
+                <p>In addition to using the default button colors, you can add custom ones, or disable any you don't need. See the <span style="color: #1565c0;font-weight: 600;"><u>Adding new colors</u></span> examples for more info.</p>
+            </div>
+            <div style="margin-top: 60px;">
+                <h1>Color</h1>
+                <div class="codeexample" style="margin-bottom: 30px; border-radius: 10px;">
+                    <div class="codeexamplemainbox">
+                        <p class="textbutton1" style="font-size: 14px;">SMALL</p>
+                        <p class="textbutton1" style="font-size: 16px;">MEDIUM</p>
+                        <p class="textbutton1" style="font-size: 18px;">LARGE</p>
+                    </div>
+                    <div class="codeexamplemainbox">
+                        <p class="buttonpagebutton2" style="font-size: 14px;">SMALL</p>
+                        <p class="buttonpagebutton2" style="font-size: 16px;">MEDIUM</p>
+                        <p class="buttonpagebutton2" style="font-size: 19px;">LARGE</p>
+                    </div>
+                    <div class="codeexamplemainbox">
+                        <p class="buttonpagebutton1" style="font-size: 14px;">SMALL</p>
+                        <p class="buttonpagebutton1" style="font-size: 16px;">MEDIUM</p>
+                        <p class="buttonpagebutton1" style="font-size: 19px;">LARGE</p>
+                    </div>
+                </div>
+                <p>In addition to using the default button colors, you can add custom ones, or disable any you don't need. See the <span style="color: #1565c0;font-weight: 600;"><u>Adding new colors</u></span> examples for more info.</p>
+            </div>
+            <div style="margin-top: 60px;">
+                <h1>Buttons with icon and label</h1>
+                <p>Sometimes you might want to have icons for certain buttons to enhance the UX of the application as we recognize logos more easily than plain text. For example, if you have a delete button you can label it with a dustbin icon.</p>
+                <div id="demo-:r1k:" class="css-abey57">
+                    <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1qtunqx" tabindex="-1" type="button" aria-label="A generic container that is programmatically focused to test keyboard navigation of our components."></button>
+                    <div class="MuiStack-root css-jj2ztu"><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-1qypela" tabindex="0" type="button"><span class="MuiButton-icon MuiButton-startIcon MuiButton-iconSizeMedium css-1s63ceu"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-q7mezt" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DeleteIcon"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"></path></svg></span>Delete<span class="MuiTouchRipple-root css-4mb1j7"></span></button><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-ghr9bt" tabindex="0" type="button">Send<span class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeMedium css-16pv1fu"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-q7mezt" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="SendIcon"><path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"></path></svg></span>
+                     
+                <div class="code-container">
+                    <button class="copy-button" onclick="copyCode('codeBlock8', this)">Copy</button>
+                    <pre id="codeBlock8">
+&lt;Button variant=&quot;outlined&quot; startIcon=&lt;DeleteIcon /&gt;&gt;
+    Delete
+&lt;/Button&gt;
+&lt;Button variant=&quot;contained&quot; endIcon=&lt;SendIcon /&gt;&gt;
+    Send
+&lt;/Button&gt;
+
+                    </pre>
+                </div>
+                <p>In addition to using the default button colors, you can add custom ones, or disable any you don't need. See the <span style="color: #1565c0;font-weight: 600;"><u>Adding new colors</u></span> examples for more info.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function copyCode(elementId, button) {
+        var code = document.getElementById(elementId).innerText;
+        navigator.clipboard.writeText(code).then(function() {
+            button.textContent = "Copied";
+            setTimeout(function() {
+                button.textContent = "Copy";
+            }, 2000); // Reset the button text after 2 seconds
+        });
+    }
+</script>
