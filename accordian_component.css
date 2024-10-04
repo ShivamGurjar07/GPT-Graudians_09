@@ -69,6 +69,7 @@ body {
     color: #444;
 }
 
+
 .accordion-content {
     display: none;
     padding: 15px;
@@ -88,6 +89,8 @@ body {
     transform: translateY(-50%);
     transition: transform 0.3s ease;
 }
+
+
 
 .accordion-toggle:checked + .accordion-header::after {
     transform: translateY(-50%) rotate(180deg); 
