@@ -70,7 +70,9 @@
             </div>
             <div class="explore-btn">
               <button class="btn">
-                <a href="#spinner"> <i class="fa-solid fa-file-invoice"></i> Explore</a>
+                <a href="#spinner">
+                  <i class="fa-solid fa-file-invoice"></i> Explore</a
+                >
               </button>
             </div>
           </div>
@@ -108,6 +110,28 @@
               <div class="spinner-border text-dark" role="status">
                 <span class="visually-hidden">Loading...</span>
               </div>
+              <br>
+
+              <button
+                class="show-code-button"
+                onclick="toggleCode('color-spinner-code')"
+              >
+                Show Code
+              </button>
+              <div class="code-section" id="color-spinner-code">
+                <pre>
+                <code>
+&lt;div class="spinner-border text-primary" role="status"&gt;&lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-secondary" role="status"&gt;&lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-success" role="status"&gt;&lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-danger" role="status"&gt;&lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-warning" role="status"&gt;&lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-info" role="status"&gt;&lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-light" role="status"&gt;&lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-dark" role="status"&gt;&lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;&lt;/div&gt;
+                  </code>
+                  </pre>
+              </div>
             </div>
           </div>
           <div class="spinner-component-body">
@@ -116,6 +140,22 @@
               <div class="spinner-grow" role="status">
                 <span class="visually-hidden">Loading...</span>
               </div>
+              <br>
+              <button
+                class="show-code-button"
+                onclick="toggleCode('spinner-code')"
+              >
+                Show Code
+              </button>
+              <div class="code-section" id="spinner-code">
+                <pre>
+                <code>
+&lt;div class="spinner-grow" role="status"&gt;
+&lt;span class="visually-hidden"&gt:Loading.../span&gt;
+&lt;/div&gt;                 
+                  </code>
+                </pre>
+              </div>
             </div>
           </div>
           <div class="spinner-component-body">
@@ -123,6 +163,22 @@
             <div class="component">
               <div class="spinner-border spinner-border-sm" role="status">
                 <span class="visually-hidden"></span>
+              </div>
+              <br>
+              <button
+                class="show-code-button"
+                onclick="toggleCode('size-spinner-code')"
+              >
+                Show Code
+              </button>
+              <div class="code-section" id="size-spinner-code">
+                <pre>
+                <code>
+&lt;div class="spinner-border spinner-border-sm" role="status"&gt;
+&lt;span class="visually-hidden">&lt;/span&gt;
+&lt;/div&gt;
+                  </code>
+                </pre>
               </div>
             </div>
           </div>
@@ -150,6 +206,31 @@
               >
                 <span class="visually-hidden"></span>
               </div>
+              <br>
+              <button
+                class="show-code-button"
+                onclick="toggleCode('custom-size-spinner-code')"
+              >
+                Show Code
+              </button>
+              <div class="code-section" id="custom-size-spinner-code">
+                <pre>
+                <code>
+&lt;div class="spinner-border spinner-border" style="width: 30px; height: 30px" role="status"&gt;
+&lt;span class="visually-hidden"&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="spinner-border spinner-border" style="width: 45px; height: 45px" role="status"&gt;
+&lt;span class="visually-hidden"&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="spinner-border spinner-border" style="width: 55px; height: 55px" role="status"&gt;
+&lt;span class="visually-hidden"&gt;
+&lt;/span&gt;
+&lt;/div&gt;        
+                </code>
+                </pre>
+              </div>
             </div>
           </div>
           <div class="spinner-component-body">
@@ -160,7 +241,25 @@
                   <span class="visually-hidden">Loading...</span>
                 </div>
               </div>
+                <br>
+                <button
+                class="show-code-button"
+                onclick="toggleCode('flex-spinner-code')"
+              >
+                Show Code
+              </button>
+              <div class="code-section" id="flex-spinner-code">
+                <pre>
+                <code>
+&lt;div class="spinner-border" role="status"&gt;
+&lt;span class="visually-hidden">Loading&lt;/span&gt;
+&lt;/div&gt;
+                </code>
+                </pre>
+              </div>
+             
             </div>
+            <div></div>
           </div>
         </div>
       </div>
@@ -179,6 +278,16 @@
           ? "fa-solid fa-xmark"
           : "fa-solid fa-bars";
       };
+
+
+      function toggleCode(id) {
+        const codeSection = document.getElementById(id);
+        if (codeSection.style.display === "block") {
+          codeSection.style.display = "none";
+        } else {
+          codeSection.style.display = "block";
+        }
+      }
     </script>
 
     <script
