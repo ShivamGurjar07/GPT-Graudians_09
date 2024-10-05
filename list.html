@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="stylesheet" href="list.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container"></div>
+        <div class="button-group">
+            <button onclick="goBack()">← Go Back</button>
+            <button onclick="browseListDoc()">Browse List Doc</button>
+        </div>
+
+        <div class="list-section">
+            <!-- Basic List -->
+            <div class="list-box">
+                <h3>Basic</h3>
+                <ul>
+                    <li onclick="navigate('Inbox')"><i class="fas fa-inbox"></i>Inbox</li>
+                    <li onclick="navigate('Drafts')"><i class="fas fa-file-alt"></i>Drafts</li>
+                    <li onclick="navigate('Trash')"><i class="fas fa-trash"></i>Trash</li>
+                    <li onclick="navigate('Spam')"><i class="fas fa-exclamation-circle"></i>Spam</li>
+                </ul>
+                <button onclick="toggleCode('basic-code')">Show Code</button>
+                <pre id="basic-code">
+&lt;ul&gt;
+    &lt;li onclick="navigate('Inbox')"&gt;&lt;i class="fas fa-inbox"&gt;&lt;/i&gt;Inbox&lt;/li&gt;
+    &lt;li onclick="navigate('Drafts')"&gt;&lt;i class="fas fa-file-alt"&gt;&lt;/i&gt;Drafts&lt;/li&gt;
+    &lt;li onclick="navigate('Trash')"&gt;&lt;i class="fas fa-trash"&gt;&lt;/i&gt;Trash&lt;/li&gt;
+    &lt;li onclick="navigate('Spam')"&gt;&lt;i class="fas fa-exclamation-circle"&gt;&lt;/i&gt;Spam&lt;/li&gt;
+&lt;/ul&gt;
+                </pre>
+            </div>
+
+            <!-- Nested List -->
+            <div class="list-box">
+                <h3>Nested List</h3>
+                <ul>
+                    <li onclick="navigate('Sent Mail')"><i class="fas fa-paper-plane"></i>Sent Mail</li>
+                    <li onclick="navigate('Drafts')"><i class="fas fa-file-alt"></i>Drafts</li>
+                    <li onclick="navigate('Inbox')"><i class="fas fa-inbox"></i>Inbox</li>
+                    <li onclick="navigate('Starred')"><i class="fas fa-star"></i>Starred</li>
+                </ul>
+                <button onclick="toggleCode('nested-code')">Show Code</button>
+                <pre id="nested-code">
+&lt;ul&gt;
+    &lt;li onclick="navigate('Sent Mail')"&gt;&lt;i class="fas fa-paper-plane"&gt;&lt;/i&gt;Sent Mail&lt;/li&gt;
+    &lt;li onclick="navigate('Drafts')"&gt;&lt;i class="fas fa-file-alt"&gt;&lt;/i&gt;Drafts&lt;/li&gt;
+    &lt;li onclick="navigate('Inbox')"&gt;&lt;i class="fas fa-inbox"&gt;&lt;/i&gt;Inbox&lt;/li&gt;
+    &lt;li onclick="navigate('Starred')"&gt;&lt;i class="fas fa-star"&gt;&lt;/i&gt;Starred&lt;/li&gt;
+&lt;/ul&gt;
+                </pre>
+            </div>
+
+            <!-- Folder List -->
+            <div class="list-box">
+                <h3>Folder List</h3>
+                <ul>
+                    <li onclick="navigate('Photos')"><i class="fas fa-camera"></i>Photos - Jan 9, 2014</li>
+                    <li onclick="navigate('Work')"><i class="fas fa-briefcase"></i>Work - Jan 7, 2014</li>
+                    <li onclick="navigate('Vacation')"><i class="fas fa-plane"></i>Vacation - July 20, 2014</li>
+                </ul>
+                <button onclick="toggleCode('folder-code')">Show Code</button>
+                <pre id="folder-code">
+&lt;ul&gt;
+    &lt;li onclick="navigate('Photos')"&gt;&lt;i class="fas fa-camera"&gt;&lt;/i&gt;Photos - Jan 9, 2014&lt;/li&gt;
+    &lt;li onclick="navigate('Work')"&gt;&lt;i class="fas fa-briefcase"&gt;&lt;/i&gt;Work - Jan 7, 2014&lt;/li&gt;
+    &lt;li onclick="navigate('Vacation')"&gt;&lt;i class="fas fa-plane"&gt;&lt;/i&gt;Vacation - July 20, 2014&lt;/li&gt;
+&lt;/ul&gt;
+                </pre>
+            </div>
+
+            <!-- Selected List -->
+            <div class="list-box">
+                <h3>Selected List</h3>
+                <ul>
+                    <li onclick="navigate('Inbox')"><i class="fas fa-inbox"></i>Inbox</li>
+                    <li onclick="navigate('Drafts')"><i class="fas fa-file-alt"></i>Drafts</li>
+                    <li onclick="navigate('Trash')"><i class="fas fa-trash"></i>Trash</li>
+                    <li onclick="navigate('Spam')"><i class="fas fa-exclamation-circle"></i>Spam</li>
+                </ul>
+                <button onclick="toggleCode('selected-code')">Show Code</button>
+                <pre id="selected-code">
+&lt;ul&gt;
+    &lt;li onclick="navigate('Inbox')"&gt;&lt;i class="fas fa-inbox"&gt;&lt;/i&gt;Inbox&lt;/li&gt;
+    &lt;li onclick="navigate('Drafts')"&gt;&lt;i class="fas fa-file-alt"&gt;&lt;/i&gt;Drafts&lt;/li&gt;
+    &lt;li onclick="navigate('Trash')"&gt;&lt;i class="fas fa-trash"&gt;&lt;/i&gt;Trash&lt;/li&gt;
+    &lt;li onclick="navigate('Spam')"&gt;&lt;i class="fas fa-exclamation-circle"&gt;&lt;/i&gt;Spam&lt;/li&gt;
+&lt;/ul&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = "components.html";
+        }
+
+        function navigate(item) {
+            alert("Navigating to " + item);
+        }
+
+        function browseListDoc() {
+            window.location.href = "https://mui.com/material-ui/react-list/"; 
+        }
+
+        function toggleCode(codeId) {
+            const codeBlock = document.getElementById(codeId);
+            if (codeBlock.style.display === 'block') {
+                codeBlock.style.display = 'none';
+            } else {
+                codeBlock.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
