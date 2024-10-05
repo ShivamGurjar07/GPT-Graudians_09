@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>navbar Components</title>
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- Navbar section start -->
+    <navbar>
+        <div class="navbar-section container-fluid">
+            <div class="navbar-card container">
+                <div class="logo">
+                    <img src="https://github.com/siditsrivastava21/image/blob/main/logo_image-removebg.png?raw=true" />
+                </div>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="components.html">Components</a></li>
+                        <li><a href="">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="toggle-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="navbar_menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="components.html">Components</a></li>
+                    <li><a href="">About Us</a></li>
+                </div>
+            </div>
+        </div>
+    </navbar>
+
+    <!-- Navbar section End -->
+
+    <!-- navbar-section start -->
+
+    <section>
+        <div class="spinner-section container-fluid">
+            <div class="spinner-section-title container">
+                <h2>Navbar</h2>
+                <div class="spinner-section-btn">
+                    <div class="goback">
+                        <a href="components.html">
+                            <button class="btn">
+                                <i class="fa-solid fa-arrow-left"></i> Go Back
+                            </button></a>
+                    </div>
+                    <div class="explore-btn">
+                        <button class="btn">
+                            <a href="#navbar">
+                                <i class="fa-solid fa-file-invoice"></i> Explore</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- navbar-section End -->
+
+    <!-- navbar-section-components start -->
+
+    <component-section>
+        <div class="navbar-component-section container-fluid" id="spinner">
+            <div class="navbar-component-card container">
+                <div class="navbar-component-body">
+                    <h4>Basic Nav</h4>
+                    <div class="component">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Active</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                        <button class="show-code-button" onclick="toggleCode('color-code')">
+                            Show Code
+                        </button>
+                        <div class="code-section" id="color-code">
+                            <pre>
+                  <code>
+&lt;ul class="nav"&gt;
+&lt;li class="nav-item"&gt;
+&lt;a class="nav-link active" aria-current="page" href="#"&gt;Active&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="nav-item"&gt;
+&lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="nav-item"&gt;
+&lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="nav-item"&gt;
+&lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+                  </code>
+                </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-component-body">
+                    <h4>Tabs</h4>
+                    <div class="component">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Active</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                        <button class="show-code-button" onclick="toggleCode('size-code')">
+                            Show Code
+                        </button>
+                        <div class="code-section" id="size-code">
+                            <pre>
+                  <code>
+&lt;ul class=&quot;nav nav-tabs&quot;&gt;
+&lt;li class=&quot;nav-item&quot;&gt;
+&lt;a class=&quot;nav-link active&quot; aria-current=&quot;page&quot; href=&quot;#&quot;&gt;Active&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class=&quot;nav-item&quot;&gt;
+&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class=&quot;nav-item&quot;&gt;
+&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class=&quot;nav-item&quot;&gt;
+&lt;a class=&quot;nav-link disabled&quot; href=&quot;#&quot; tabindex=&quot;-1&quot; aria-disabled=&quot;true&quot;&gt;Disabled&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+                  </code>
+                </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-component-body">
+                    <h4>Pills</h4>
+                    <div class="component">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Active</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                        <button class="show-code-button" onclick="toggleCode('pills-code')">
+                            Show Code
+                        </button>
+                        <div class="code-section" id="pills-code">
+                            <pre>
+                <code>
+&lt;ul class="nav nav-pills"&gt;
+&lt;li class="nav-item"&gt;
+&lt;a class="nav-link active" aria-current="page" href="#"&gt;
+Active
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="nav-item"&gt;
+&lt;a class="nav-link" href="#"&gt;
+Link
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="nav-item"&gt;
+&lt;a class="nav-link" href="#"&gt;
+Link
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="nav-item"&gt;
+&lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;
+Disabled
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+                            </code>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="navbar-component-body">
+                    <h4>Fill and Justify</h4>
+                    <div class="component">
+                        <ul class="nav nav-pills nav-fill">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Active</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Much longer nav link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                        <button class="show-code-button" onclick="toggleCode('justify-code')">
+                            Show Code
+                        </button>
+                        <div class="code-section" id="justify-code">
+                            <pre>
+                <code>
+&lt;ul class="nav nav-pills nav-fill"&gt;
+&lt;li class="nav-item"&gt;
+&lt;a class="nav-link active" aria-current="page" href="#"&gt;
+Active
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="nav-item"&gt;
+&lt;a class="nav-link" href="#"&gt;Much longer nav link&lt;/a&gt;&lt;/li&gt;
+&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li class="nav-item"&gt;&lt;a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"&gt;Disabled&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+                  
+
+
+                </code>
+                </pre>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </component-section>
+
+
+
+
+
+    <!-- </div>
+      </div>
+    </component-section> -->
+
+    <!-- navbar-section-components end -->
+
+    <script>
+        const toggleBtn = document.querySelector(".toggle-btn");
+        const toggleBtnIcon = document.querySelector(".toggle-btn i");
+        const navbarMenu = document.querySelector(".navbar_menu");
+
+        toggleBtn.onclick = function () {
+            navbarMenu.classList.toggle("open");
+            const isopen = navbarMenu.classList.contains("open");
+
+            toggleBtnIcon.classList = isopen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars";
+        };
+
+        function toggleCode(id) {
+            const codeSection = document.getElementById(id);
+            if (codeSection.style.display === "block") {
+                codeSection.style.display = "none";
+            } else {
+                codeSection.style.display = "block";
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

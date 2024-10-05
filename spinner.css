@@ -1,0 +1,84 @@
+/* spinner-section start */
+  
+.spinner-section {
+    width: auto;
+    height: 300px;
+    padding-top: 100px;
+    background-color: #f3f4f6;
+  }
+  
+  .spinner-section-btn {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .goback button {
+    background-color: #1c113d;
+    color: white;
+  }
+  
+  .goback button:hover {
+    background-color: #1c113d;
+    color: white;
+  }
+  
+  .spinner-section-btn button a {
+    color: white;
+    text-decoration: none;
+  }
+  .spinner-section-btn button a:focus {
+    color: white;
+    text-decoration: none;
+  }
+  
+  
+  
+  .explore-btn {
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 1px solid grey;
+  }
+  .explore-btn button a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .spinner-component-section {
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .spinner-component-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+  .spinner-component-body {
+    width: 100%;
+    height: auto;
+    margin-right: 50px;
+    padding-top: 20px;
+    padding-left: 30px;
+    background-color: #f3f4f6;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .component {
+    padding-top: 10px;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .spinner-component-body {
+      margin-right: 0;
+    }
+  }
+  
+  
+  /* Spinner-component-section end */

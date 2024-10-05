@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(33, 33, 34, 0.8);;
+    /* Updated background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    padding: 20px;
+    background-color: rgba(33, 33, 34, 0.8);
+    /* Semi-transparent container */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    width: 100%;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 15px;
+    background-image: linear-gradient(to right, #ff6a00, #ee0979);
+    /* Updated colors */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #ff4500;
+    /* Updated hover color */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.checkbox-with {
+    text-align: center;
+    margin: 20px 0;
+
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 2.18rem;
+
+    
+    font-weight: bold;
+    animation: slideIn 1s ease forwards;
+}
+
+h2 {
+    color: white;
+    color: transparent;
+    margin: 0;
+}
+
+.section {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    /* Border added */
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.checkbox-group,
+.label-group,
+.custom-icon {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #ff6a00;
+    border-color: #ee0979;
+    transform: scale(1.1);
+}
+
+input[type="checkbox"]:checked:after {
+    content: "✓";
+    color: white;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+pre {
+    background-color: #2e1d57;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    display: none;
+    overflow-x: auto;
+}
+
+.show-code-button {
+    padding: 5px 8px;
+    font-size: 12px;
+    background-color: #ff6a00;
+    /* Updated color */
+    color: white;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .checkbox-group,
+    .label-group,
+    .custom-icon {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    input[type="checkbox"] {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 10px;
+    }
+
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.csid  {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.56rem;
+   color: white;
+    font-weight: bold;
+}
+*{
+    font-weight: 700;
+}

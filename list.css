@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(33, 33, 34, 0.8);;
+}
+*{
+    text-decoration-style: none;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: rgba(33, 33, 34, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+    background-color: rgba(33, 33, 34, 0.8);;
+}
+
+.button-group {
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 15px;
+    background-image: linear-gradient(to right, #ff6a00, #ee0979);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #ee0979;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.listwith {
+    text-align: center;
+    margin: 20px 0;
+    
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    font-size: 2.18rem;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    animation: slideIn 1s ease forwards;
+}
+
+.list-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.list-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.csid  {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.56rem;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+}
+
+.list-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.list-box ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.list-box ul li:hover {
+    text-decoration: underline;
+}
+
+.list-box ul li i {
+    margin-right: 10px;
+}
+
+pre {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    display: none;
+    overflow-x: auto;
+}
+
+.show-code-button {
+    padding: 5px 10px;
+    font-size: 12px;
+    background-image: linear-gradient(to right, #ff6a00, #ee0979);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.show-code-button:hover {
+    background-color: #ee0979;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .list-section {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        margin-bottom: 10px;
+    }
+   
+}
+
+@media (max-width: 480px) {
+    .list-box {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .list-box h3 {
+        font-size: 16px;
+    }
+   
+}
+
+/* Keyframes for animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
