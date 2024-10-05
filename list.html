@@ -15,12 +15,12 @@
             <button onclick="browseListDoc()">Browse List Doc</button>
         </div>
 
-        <h1>List with Code Examples</h1>
+        <h1 class="listwith">List with Code Examples</h1>
 
         <div class="list-section">
             <!-- Basic List -->
             <div class="list-box">
-                <h3>Basic</h3>
+                <h3 class="csid">Basic</h3>
                 <ul>
                     <li onclick="navigate('Inbox')"><i class="fas fa-inbox"></i>Inbox</li>
                     <li onclick="navigate('Drafts')"><i class="fas fa-file-alt"></i>Drafts</li>
@@ -40,7 +40,7 @@
 
             <!-- Nested List -->
             <div class="list-box">
-                <h3>Nested List</h3>
+                <h3 class="csid">Nested List</h3>
                 <ul>
                     <li onclick="navigate('Sent Mail')"><i class="fas fa-paper-plane"></i>Sent Mail</li>
                     <li onclick="navigate('Drafts')"><i class="fas fa-file-alt"></i>Drafts</li>
@@ -60,7 +60,7 @@
 
             <!-- Folder List -->
             <div class="list-box">
-                <h3>Folder List</h3>
+                <h3 class="csid">Folder List</h3>
                 <ul>
                     <li onclick="navigate('Photos')"><i class="fas fa-camera"></i>Photos - Jan 9, 2014</li>
                     <li onclick="navigate('Work')"><i class="fas fa-briefcase"></i>Work - Jan 7, 2014</li>
@@ -78,7 +78,7 @@
 
             <!-- Selected List -->
             <div class="list-box">
-                <h3>Selected List</h3>
+                <h3 class="csid">Selected List</h3>
                 <ul>
                     <li onclick="navigate('Important')"><i class="fas fa-exclamation"></i>Important</li>
                     <li onclick="navigate('Work')"><i class="fas fa-briefcase"></i>Work</li>
@@ -97,9 +97,7 @@
     </div>
 
     <script>
-        function navigate(destination) {
-            alert("Navigating to " + destination);
-        }
+       
 
         function goBack() {
             window.location.href = "components.html";
