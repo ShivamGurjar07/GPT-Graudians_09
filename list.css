@@ -34,6 +34,13 @@ button:hover {
     background-color: #0056b3;
 }
 
+h1 {
+    text-align: center;
+    margin: 20px 0; 
+    font-size: 24px; 
+    color: #ff66cc;
+}
+
 .list-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -93,9 +100,24 @@ pre {
     overflow-x: auto;
 }
 
+.show-code-button {
+    padding: 5px 10px; 
+    font-size: 12px; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    margin-top: 10px; 
+}
+
+.show-code-button:hover {
+    background-color: #0056b3;
+}
+
 @media (max-width: 768px) {
     .list-section {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 
     button {
@@ -106,7 +128,7 @@ pre {
 @media (max-width: 480px) {
     .list-box {
         padding: 10px;
-        font-size: 14px; 
+        font-size: 14px;
     }
 
     button {

@@ -14,8 +14,9 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 button {
@@ -25,10 +26,18 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #0056b3;
+}
+
+h1 {
+    text-align: center; 
+    margin: 20px 0; 
+    font-size: 24px; 
+    color: #ff66cc;
 }
 
 h2 {
@@ -37,6 +46,7 @@ h2 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+    margin: 0; 
 }
 
 .section {
@@ -58,27 +68,82 @@ h2 {
     display: flex;
     gap: 10px;
     margin: 10px 0;
+    flex-wrap: wrap;
 }
 
 input[type="checkbox"] {
+    appearance: none; 
     width: 20px;
     height: 20px;
-    cursor: pointer;
-}
-
-.colored input[type="checkbox"] {
-    background-color: transparent;
+    background-color: #1c1031; 
     border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
-label {
+input[type="checkbox"]:checked {
+    background-color: #007bff; 
+    border-color: #0056b3; 
+}
+
+input[type="checkbox"]:checked:after {
+    content: "✓"; 
+    color: white;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-group label {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.custom-icon input[type="checkbox"] {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
+pre {
+    background-color: #2e1d57;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    display: none; 
+    overflow-x: auto;
+}
+
+.show-code-button {
+    padding: 5px 8px; 
+    font-size: 12px; 
+}
+
+@media (max-width: 768px) {
+    button {
+        padding: 8px 12px; 
+        font-size: 14px;
+    }
+
+    .checkbox-group, .label-group, .custom-icon {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    input[type="checkbox"] {
+        width: 25px; 
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 10px;
+    }
+
+    input[type="checkbox"] {
+        width: 20px; 
+        height: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
 }

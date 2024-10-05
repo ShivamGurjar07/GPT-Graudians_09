@@ -6,13 +6,16 @@
     <title>List</title>
     <link rel="stylesheet" href="list.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container">
         <div class="button-group">
             <button onclick="goBack()">← Go Back</button>
             <button onclick="browseListDoc()">Browse List Doc</button>
         </div>
+
+        <h1>List with Code Examples</h1> <!-- New Heading -->
 
         <div class="list-section">
             <!-- Basic List -->
@@ -24,7 +27,7 @@
                     <li onclick="navigate('Trash')"><i class="fas fa-trash"></i>Trash</li>
                     <li onclick="navigate('Spam')"><i class="fas fa-exclamation-circle"></i>Spam</li>
                 </ul>
-                <button onclick="toggleCode('basic-code')">Show Code</button>
+                <button class="show-code-button" onclick="toggleCode('basic-code')">Show Code</button>
                 <pre id="basic-code">
 &lt;ul&gt;
     &lt;li onclick="navigate('Inbox')"&gt;&lt;i class="fas fa-inbox"&gt;&lt;/i&gt;Inbox&lt;/li&gt;
@@ -44,7 +47,7 @@
                     <li onclick="navigate('Inbox')"><i class="fas fa-inbox"></i>Inbox</li>
                     <li onclick="navigate('Starred')"><i class="fas fa-star"></i>Starred</li>
                 </ul>
-                <button onclick="toggleCode('nested-code')">Show Code</button>
+                <button class="show-code-button" onclick="toggleCode('nested-code')">Show Code</button>
                 <pre id="nested-code">
 &lt;ul&gt;
     &lt;li onclick="navigate('Sent Mail')"&gt;&lt;i class="fas fa-paper-plane"&gt;&lt;/i&gt;Sent Mail&lt;/li&gt;
@@ -63,7 +66,7 @@
                     <li onclick="navigate('Work')"><i class="fas fa-briefcase"></i>Work - Jan 7, 2014</li>
                     <li onclick="navigate('Vacation')"><i class="fas fa-plane"></i>Vacation - July 20, 2014</li>
                 </ul>
-                <button onclick="toggleCode('folder-code')">Show Code</button>
+                <button class="show-code-button" onclick="toggleCode('folder-code')">Show Code</button>
                 <pre id="folder-code">
 &lt;ul&gt;
     &lt;li onclick="navigate('Photos')"&gt;&lt;i class="fas fa-camera"&gt;&lt;/i&gt;Photos - Jan 9, 2014&lt;/li&gt;
@@ -77,18 +80,16 @@
             <div class="list-box">
                 <h3>Selected List</h3>
                 <ul>
-                    <li onclick="navigate('Inbox')"><i class="fas fa-inbox"></i>Inbox</li>
-                    <li onclick="navigate('Drafts')"><i class="fas fa-file-alt"></i>Drafts</li>
-                    <li onclick="navigate('Trash')"><i class="fas fa-trash"></i>Trash</li>
-                    <li onclick="navigate('Spam')"><i class="fas fa-exclamation-circle"></i>Spam</li>
+                    <li onclick="navigate('Important')"><i class="fas fa-exclamation"></i>Important</li>
+                    <li onclick="navigate('Work')"><i class="fas fa-briefcase"></i>Work</li>
+                    <li onclick="navigate('Personal')"><i class="fas fa-user"></i>Personal</li>
                 </ul>
-                <button onclick="toggleCode('selected-code')">Show Code</button>
+                <button class="show-code-button" onclick="toggleCode('selected-code')">Show Code</button>
                 <pre id="selected-code">
 &lt;ul&gt;
-    &lt;li onclick="navigate('Inbox')"&gt;&lt;i class="fas fa-inbox"&gt;&lt;/i&gt;Inbox&lt;/li&gt;
-    &lt;li onclick="navigate('Drafts')"&gt;&lt;i class="fas fa-file-alt"&gt;&lt;/i&gt;Drafts&lt;/li&gt;
-    &lt;li onclick="navigate('Trash')"&gt;&lt;i class="fas fa-trash"&gt;&lt;/i&gt;Trash&lt;/li&gt;
-    &lt;li onclick="navigate('Spam')"&gt;&lt;i class="fas fa-exclamation-circle"&gt;&lt;/i&gt;Spam&lt;/li&gt;
+    &lt;li onclick="navigate('Important')"&gt;&lt;i class="fas fa-exclamation"&gt;&lt;/i&gt;Important&lt;/li&gt;
+    &lt;li onclick="navigate('Work')"&gt;&lt;i class="fas fa-briefcase"&gt;&lt;/i&gt;Work&lt;/li&gt;
+    &lt;li onclick="navigate('Personal')"&gt;&lt;i class="fas fa-user"&gt;&lt;/i&gt;Personal&lt;/li&gt;
 &lt;/ul&gt;
                 </pre>
             </div>
@@ -96,25 +97,21 @@
     </div>
 
     <script>
+        function navigate(destination) {
+            alert("Navigating to " + destination);
+        }
+
         function goBack() {
             window.location.href = "components.html";
         }
 
-        function navigate(item) {
-            alert("Navigating to " + item);
-        }
-
         function browseListDoc() {
-            window.location.href = "https://mui.com/material-ui/react-list/"; 
+            window.location.href = "https://mui.com/material-ui/react-list/";
         }
 
         function toggleCode(codeId) {
-            const codeBlock = document.getElementById(codeId);
-            if (codeBlock.style.display === 'block') {
-                codeBlock.style.display = 'none';
-            } else {
-                codeBlock.style.display = 'block';
-            }
+            const codeElement = document.getElementById(codeId);
+            codeElement.style.display = codeElement.style.display === 'none' || codeElement.style.display === '' ? 'block' : 'none';
         }
     </script>
 </body>

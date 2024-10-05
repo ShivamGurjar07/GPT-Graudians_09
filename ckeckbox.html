@@ -12,7 +12,9 @@
             <button onclick="goBack()">← Go Back</button>
             <button onclick="browseCheckboxDoc()">Browse Checkbox Doc</button>
         </div>
-        
+
+        <h1>Checkbox with Code Examples</h1>
+
         <!-- Basic checkboxes section -->
         <div class="section">
             <h2>Basic</h2>
@@ -22,18 +24,37 @@
                 <input type="checkbox" disabled>
                 <input type="checkbox" disabled>
             </div>
+            <button class="show-code-button" onclick="toggleCode('basic-code')">Show Code</button>
+            <pre id="basic-code">
+&lt;div class="checkbox-group"&gt;
+    &lt;input type="checkbox"&gt;
+    &lt;input type="checkbox" checked&gt;
+    &lt;input type="checkbox" disabled&gt;
+    &lt;input type="checkbox" disabled&gt;
+&lt;/div&gt;
+            </pre>
         </div>
 
         <!-- Colored checkboxes section -->
         <div class="section">
             <h2>Colors</h2>
             <div class="checkbox-group colored">
-                <input type="checkbox" style="background-color: blue;">
-                <input type="checkbox" style="background-color: black;">
-                <input type="checkbox" style="background-color: green;">
-                <input type="checkbox" style="background-color: yellow;">
-                <input type="checkbox" style="background-color: red;">
+                <input type="checkbox" checked style="background-color: blue;">
+                <input type="checkbox" checked style="background-color: black;">
+                <input type="checkbox" checked style="background-color: green;">
+                <input type="checkbox" checked style="background-color: yellow;">
+                <input type="checkbox" checked style="background-color: red;">
             </div>
+            <button class="show-code-button" onclick="toggleCode('colors-code')">Show Code</button>
+            <pre id="colors-code">
+&lt;div class="checkbox-group colored"&gt;
+    &lt;input type="checkbox" style="background-color: blue;"&gt;
+    &lt;input type="checkbox" style="background-color: black;"&gt;
+    &lt;input type="checkbox" style="background-color: green;"&gt;
+    &lt;input type="checkbox" style="background-color: yellow;"&gt;
+    &lt;input type="checkbox" style="background-color: red;"&gt;
+&lt;/div&gt;
+            </pre>
         </div>
 
         <!-- Labeled checkboxes section -->
@@ -45,6 +66,15 @@
                 <label><input type="checkbox" style="background-color: green;" checked> Success</label>
                 <label><input type="checkbox" style="background-color: yellow;"> Warning</label>
             </div>
+            <button class="show-code-button" onclick="toggleCode('label-code')">Show Code</button>
+            <pre id="label-code">
+&lt;div class="label-group"&gt;
+    &lt;label&gt;&lt;input type="checkbox" checked&gt; Primary&lt;/label&gt;
+    &lt;label&gt;&lt;input type="checkbox"&gt; Secondary&lt;/label&gt;
+    &lt;label&gt;&lt;input type="checkbox" style="background-color: green;" checked&gt; Success&lt;/label&gt;
+    &lt;label&gt;&lt;input type="checkbox" style="background-color: yellow;"&gt; Warning&lt;/label&gt;
+&lt;/div&gt;
+            </pre>
         </div>
 
         <!-- Custom size & icon section -->
@@ -56,16 +86,34 @@
                 <input type="checkbox" checked style="border-radius: 50%;">
                 <input type="checkbox" checked style="border-radius: 0;">
             </div>
+            <button class="show-code-button" onclick="toggleCode('sizes-code')">Show Code</button>
+            <pre id="sizes-code">
+&lt;div class="custom-icon"&gt;
+    &lt;input type="checkbox" checked&gt;
+    &lt;input type="checkbox" checked&gt;
+    &lt;input type="checkbox" checked style="border-radius: 50%;"&gt;
+    &lt;input type="checkbox" checked style="border-radius: 0;"&gt;
+&lt;/div&gt;
+            </pre>
         </div>
     </div>
 
     <script>
         function goBack() {
-            window.location.href = "components.html"; 
+            window.location.href = "components.html";
         }
 
         function browseCheckboxDoc() {
-            window.location.href = "https://mui.com/material-ui/react-checkbox/"; 
+            window.location.href = "https://mui.com/material-ui/react-checkbox/";
+        }
+
+        function toggleCode(id) {
+            const codeBlock = document.getElementById(id);
+            if (codeBlock.style.display === "block") {
+                codeBlock.style.display = "none";
+            } else {
+                codeBlock.style.display = "block";
+            }
         }
     </script>
 </body>
