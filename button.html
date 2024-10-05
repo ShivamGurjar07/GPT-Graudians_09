@@ -36,24 +36,72 @@
             background-color: #45a049;
         }
         .codeexample{
-            border: 1px solid rgb(158, 158, 158);
+            border: 1px solid rgba(158, 158, 158, 0.342);
             margin-bottom: -21px;
             border-radius: 10px 10px 0px 0px;
-            width: 100%;
-            overflow: none;
         }
         .codeexamplemainbox{
             display: flex;
+            width: 40%;
             margin: auto;
             justify-content: space-evenly;
             text-align: center;
             align-items: center;
             padding: 18px;
-            width: 40%;
 
         }
-        .codeexamplemainbox>p{
-            margin: 5px;
+        @media (max-width:1100px){
+            .codeexamplemainbox{
+            width: 60%;
+
+        }
+        }
+        @media (max-width:800px){
+            .codeexamplemainbox{
+            width: 80%;
+
+        }
+        }
+        @media (max-width:600px){
+            .codeexamplemainbox{
+            width: 95%;
+            padding: 10px 2px;
+            }
+            #buttonpage{
+            width: 100%;
+            margin: auto;
+            font-family: sans-serif;
+        }
+        }
+        @media (max-width:500px){
+            .codeexamplemainbox{
+            width: 100%;
+            padding: 10px 2px;
+        }
+        #buttonpage{
+            width: 100%;
+            margin: auto;
+            font-family: sans-serif;
+            margin: -2px;
+            overflow: hidden;
+        }
+        .buttonpagebutton1{
+            background-color: #1565c0;
+            padding: 10px 10px;
+            margin-top: 10px;
+            color:  #ffff;
+            font-weight: bold;
+            border-radius: 7px;
+        }
+        .colorbutton{
+            padding: 10px;
+        }
+        .colorbutton1{
+           padding: 10px;
+        }
+        .colorbutton2{
+            padding: 10px;
+        }
         }
         .buttonpagebutton1{
             background-color: #1565c0;
@@ -69,9 +117,6 @@
             padding: 10px 30px;
             margin-top: 10px;
             border-radius: 7px;
-        }
-        .buttonpagebutton2:hover{
-            background-color: #1565c03d;
         }
         #listbutton{
             line-height: 1.6;
@@ -138,8 +183,14 @@
         .colorbutton2:hover{
             background-color: rgba(255, 0, 0, 0.219);
         }
-        .css-abey57{
-            display: flex;
+        .buttonpagebutton1:hover{
+            background-color: #1815c0fd;
+        }
+        .buttonpagebutton2:hover{
+            background-color: #89c0ff3b;
+        }
+        .codeexamplemainboximg{
+            width: 15px;
         }
     </style>
 </head>
@@ -324,10 +375,12 @@ Click me
             <div style="margin-top: 60px;">
                 <h1>Buttons with icon and label</h1>
                 <p>Sometimes you might want to have icons for certain buttons to enhance the UX of the application as we recognize logos more easily than plain text. For example, if you have a delete button you can label it with a dustbin icon.</p>
-                <div id="demo-:r1k:" class="css-abey57">
-                    <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1qtunqx" tabindex="-1" type="button" aria-label="A generic container that is programmatically focused to test keyboard navigation of our components."></button>
-                    <div class="MuiStack-root css-jj2ztu"><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-1qypela" tabindex="0" type="button"><span class="MuiButton-icon MuiButton-startIcon MuiButton-iconSizeMedium css-1s63ceu"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-q7mezt" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DeleteIcon"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"></path></svg></span>Delete<span class="MuiTouchRipple-root css-4mb1j7"></span></button><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-ghr9bt" tabindex="0" type="button">Send<span class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeMedium css-16pv1fu"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-q7mezt" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="SendIcon"><path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"></path></svg></span>
-                     
+                <div class="codeexample">
+                    <div class="codeexamplemainbox">
+                        <p class="buttonpagebutton2"><img style="margin-left: 3px;" class="codeexamplemainboximg" src="https://i.ibb.co/GQK9pJb/delete.png" alt="">DELETE</p>
+                        <p class="buttonpagebutton1">ERROR <img style="margin-right: 5px;" class="codeexamplemainboximg" src="https://i.ibb.co/7pvGsnL/send-message.png" alt=""> </p>
+                    </div>
+                </div>
                 <div class="code-container">
                     <button class="copy-button" onclick="copyCode('codeBlock8', this)">Copy</button>
                     <pre id="codeBlock8">
@@ -340,7 +393,35 @@ Click me
 
                     </pre>
                 </div>
-                <p>In addition to using the default button colors, you can add custom ones, or disable any you don't need. See the <span style="color: #1565c0;font-weight: 600;"><u>Adding new colors</u></span> examples for more info.</p>
+            </div>
+            <div style="margin-top: 60px;">
+                <h1>Color</h1>
+                <div class="codeexample">
+                    <div class="codeexamplemainbox">
+                        <img class="lastimg" style="width: 20px;" src="https://i.ibb.co/GQK9pJb/delete.png" alt="">
+                        <img class="lastimg" style="width: 25px;" src="https://i.ibb.co/GQK9pJb/delete.png" alt="">
+                        <img class="lastimg" style="width: 30px;" src="https://i.ibb.co/GQK9pJb/delete.png" alt="">
+                        <img class="lastimg" style="width: 35px;" src="https://i.ibb.co/GQK9pJb/delete.png" alt="">
+                    </div>
+                </div>
+                <div class="code-container">
+                    <button class="copy-button" onclick="copyCode('codeBlock9', this)">Copy</button>
+                    <pre id="codeBlock9">
+&lt;IconButton aria-label=&quot;delete&quot;&gt;
+&lt;DeleteIcon /&gt;
+&lt;/IconButton&gt;
+&lt;IconButton aria-label=&quot;delete&quot; disabled color=&quot;primary&quot;&gt;
+&lt;DeleteIcon /&gt;
+&lt;/IconButton&gt;
+&lt;IconButton color=&quot;secondary&quot; aria-label=&quot;add an alarm&quot;&gt;
+&lt;AlarmIcon /&gt;
+&lt;/IconButton&gt;
+&lt;IconButton color=&quot;primary&quot; aria-label=&quot;add to shopping cart&quot;&gt;
+&lt;AddShoppingCartIcon /&gt;
+&lt;/IconButton&gt;
+
+                    </pre>
+                </div>
             </div>
         </div>
     </div>
