@@ -28,10 +28,13 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-right: 10px; 
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: translateY(-5px); 
 }
 
 h1 {
@@ -109,10 +112,13 @@ pre {
     border-radius: 5px; 
     cursor: pointer;
     margin-top: 10px; 
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .show-code-button:hover {
     background-color: #0056b3;
+    transform: translateY(-5px); 
 }
 
 @media (max-width: 768px) {
@@ -140,3 +146,4 @@ pre {
         font-size: 16px;
     }
 }
+
